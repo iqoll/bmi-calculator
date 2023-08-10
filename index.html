@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>BMI Calculator</h1>
+  <div class="container">
+    <Label for="weight">Weight:</Label>
+    <input type="number" id="weight">
+    <label for="height">Height:</label>
+    <input type="number">
+    <button id="calculateBtn">Calculate</button>
 
-  <Label for="weight">Weight:</Label>
-  <input type="number" id="weight">
-  <label for="height">Height:</label>
-  <input type="number">
-  <button id="calculateBtn">Calculate</button>
+    <div class="result-container">
+      <div class="bmi">Your BMI:<span id="bmi-result"></span></div>
+    </div>
+  </div>
 </body>
 </html>

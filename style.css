@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 50px;
+}
+
+label {
+  display: block;
+  padding: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.1rem;
+}
+
+button {
+  margin: 10px 0;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.result-container {
+  font-style: bold;
+}
