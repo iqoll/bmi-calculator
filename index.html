@@ -9,15 +9,18 @@
 <body>
   <h1>BMI Calculator</h1>
   <div class="container">
-    <Label for="weight">Weight:</Label>
+    <Label for="weight">Weight(KG):</Label>
     <input type="number" id="weight">
-    <label for="height">Height:</label>
-    <input type="number">
+    <label for="height">Height(M):</label>
+    <input type="number" id="height">
     <button id="calculateBtn">Calculate</button>
 
     <div class="result-container">
-      <div class="bmi">Your BMI:<span id="bmi-result"></span></div>
+      <div class="bmi">Your BMI:<span id="bmiResult"></span>&sup2;</div>
+      <div class="classification">Your Classification: <span id="classification"></span></div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
