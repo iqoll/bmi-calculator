@@ -1,14 +1,30 @@
 const calculateBtn = document.getElementById('calculateBtn')
 const bmiResult = document.getElementById('bmiResult')
 const classification = document.getElementById('classification')
+const error = document.querySelector('.error')
 
 const calculateBMI = () => {
   const weight = parseFloat(document.getElementById('weight').value)
   const height = parseFloat(document.getElementById('height').value)
 
-  if(isNaN(weight) || isNaN(height)) {
-    alert('Please enter your weight & height!')
+  // Input validation
+  if(isNaN(weight)) {
+    error.textContent = 'Please enter a valid number for the weight input fields'
+  }  
+  if(isNaN(height)) {
+    error.textContent = 'Please enter a valid number for the height input fields'
   }
+
+  // Check if there is an error message
+  if (error.textContent !== '') {
+    setTimeout(() => {
+      error.textContent = ''
+    }, 3000)
+  }
+   
+    if(weight < 0 || height < 0) {
+      alert('Please enter a valid number for the calculation')
+    } else {
 
   const bmi = weight / (height * height)
   console.log(bmi.toFixed(2))
@@ -32,6 +48,7 @@ const calculateBMI = () => {
   
  bmiResult.textContent = ` ${bmi.toFixed(2)} kg/m`
  classification.textContent = `${classification2}`
+}
 }
 
 calculateBtn.addEventListener('click', calculateBMI)
